@@ -59,7 +59,8 @@ class _CartViewState extends State<CartView> {
                             .decreaseItemAmount(item);
                       },
                     ),
-                    Text('${(item?.price ?? 0) * (item?.amount ?? 1)}\$',
+                    Text(
+                        '${((item?.price ?? 0) * (item?.amount ?? 1)).toStringAsFixed(2)}\$',
                         style: Theme.of(context).textTheme.bodyMedium),
                   ],
                 ),

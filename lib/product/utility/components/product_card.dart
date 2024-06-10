@@ -76,7 +76,6 @@ class _ProductCardState extends State<ProductCard> {
       context: context,
       builder: (context) {
         return Container(
-          width: MediaQuery.of(context).size.width,
           decoration: const BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.all(Radius.circular(12))),
@@ -94,7 +93,7 @@ class _ProductCardState extends State<ProductCard> {
                   style: Theme.of(context).textTheme.bodyMedium),
               const Divider(),
               Text("${widget.model.description.toString()}\$",
-                  style: Theme.of(context).textTheme.bodyMedium),
+                  maxLines: 5, style: Theme.of(context).textTheme.bodyMedium),
             ],
           ),
         );

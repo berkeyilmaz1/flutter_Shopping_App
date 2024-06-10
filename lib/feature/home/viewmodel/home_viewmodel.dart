@@ -5,23 +5,39 @@ import 'package:shopping_app/product/service/product_service.dart';
 
 abstract class HomeviewModel extends State<HomeView> {
   List<ProductModel>? items;
+  List<ProductModel>? filteredItems;
   bool isLoading = false;
   late final ProductService _productService;
 
-  get shopItems => items;
-
   @override
   void initState() {
-    super.initState();
     _productService = ProductService();
-
     fetchItems();
+    super.initState();
+  }
+
+  void runFilter(String enteredWord) {
+    List<ProductModel>? results = [];
+
+    if (enteredWord.isEmpty) {
+      results = items;
+    } else {
+      results = items
+          ?.where((item) =>
+              item.title?.toLowerCase().contains(enteredWord.toLowerCase()) ??
+              false)
+          .toList();
+    }
+    setState(() {
+      filteredItems = results;
+    });
   }
 
   Future<void> fetchItems() async {
     changeLoading();
     items = await _productService.fetchItems();
     changeLoading();
+    filteredItems = items;
   }
 
   void changeLoading() {

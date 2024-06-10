@@ -62,4 +62,7 @@ void addItemToCart(ProductModel? model, int amount) {
     }
     return totalPrice;
   }
+
+
+  
 }

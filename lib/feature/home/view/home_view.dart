@@ -24,11 +24,10 @@ class _HomeViewState extends HomeviewModel {
                 .textTheme
                 .bodyMedium
                 ?.copyWith(color: ProjectColors.siyah)),
-        actions: [
-          isLoading
-              ? const Center(child: CircularProgressIndicator())
-              : const SizedBox.shrink()
-        ],
+        leading: isLoading
+            ? const Center(child: CircularProgressIndicator())
+            : const SizedBox.shrink(),
+        actions: [_searchBar(context)],
       ),
       body: Consumer<CartProvider>(
         builder: (context, value, child) {
@@ -46,6 +45,54 @@ class _HomeViewState extends HomeviewModel {
         },
       ),
     );
+  }
+
+  IconButton _searchBar(BuildContext context) {
+    return IconButton(
+        onPressed: () => showDialog(
+              context: context,
+              builder: (context) => AlertDialog(
+                actions: [
+                  SizedBox(
+                    width: 600,
+                    height: 600,
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Column(
+                        children: [
+                          TextField(
+                            onChanged: (value) => runFilter(value),
+                            decoration: const InputDecoration(
+                              labelText: "Ara",
+                              border: OutlineInputBorder(),
+                              prefixIcon: Icon(Icons.search),
+                            ),
+                          ),
+                          Expanded(
+                              child: SizedBox(
+                            width: 400,
+                            height: 200,
+                            child: ListView.builder(
+                              itemCount: filteredItems?.length ?? 0,
+                              itemBuilder: (BuildContext context, int index) {
+                                final item = filteredItems![index];
+                                return Card(
+                                  child: ListTile(
+                                    leading: Image.network(item.image ?? " "),
+                                    title: Text(item.title ?? ""),
+                                  ),
+                                );
+                              },
+                            ),
+                          ))
+                        ],
+                      ),
+                    ),
+                  )
+                ],
+              ),
+            ),
+        icon: const Icon(Icons.search_rounded));
   }
 
   FloatingActionButton _fabButton(BuildContext context) {
