@@ -5,7 +5,7 @@
 ## The Libraries and Technologies
 -MVVM (Model-View-ViewModel) Architecture:MVVM is an architectural pattern where Model represents data and business logic, View represents UI components, and ViewModel acts as an intermediary, facilitating data flow and user interactions in a decoupled manner. <br>
 
--FakeStore API: The FakeStore API provides some fake products and informations about that.[FakeStoreApi]([https://openweathermap.org/current](https://fakestoreapi.com)) <br>
+-FakeStore API: The FakeStore API provides some fake products and informations about that.[FakeStoreApi](https://fakestoreapi.com) <br>
 
 -Dio => [Dio](https://pub.dev/packages/dio) <br>
 
