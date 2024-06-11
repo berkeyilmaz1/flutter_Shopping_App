@@ -7,13 +7,30 @@ abstract class HomeviewModel extends State<HomeView> {
   List<ProductModel>? items;
   List<ProductModel>? filteredItems;
   bool isLoading = false;
-  late final ProductService _productService;
+  late ProductService _productService;
+  String servicePathName = "";
+   int selectedChipIndex = -1;
+   String pathName = '';
+
+  final List<String> categories = [
+    'electronics',
+    'jewelery',
+    "men's clothing",
+    "women's clothing"
+  ];
+
+  final List<String> paths = [
+    '/category/electronics',
+    '/category/jewelery',
+    "/category/men's clothing",
+    "/category/women's clothing"
+  ];
 
   @override
   void initState() {
-    _productService = ProductService();
-    fetchItems();
     super.initState();
+    _productService = ProductService(servicePathName);
+    fetchItems();
   }
 
   void runFilter(String enteredWord) {
@@ -35,6 +52,7 @@ abstract class HomeviewModel extends State<HomeView> {
 
   Future<void> fetchItems() async {
     changeLoading();
+    _productService = ProductService(servicePathName);
     items = await _productService.fetchItems();
     changeLoading();
     filteredItems = items;
