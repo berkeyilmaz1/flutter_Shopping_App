@@ -14,17 +14,18 @@ class _CartViewState extends State<CartView> {
   final String removeText = "Ürün sepetten çıkarıldı";
   @override
   Widget build(BuildContext context) {
+    const String storeName = "M Y  S T O R E";
     return Scaffold(
       backgroundColor: ProjectColors.beyaz,
       appBar: AppBar(
-        title: Text("M Y  S T O R E",
+        title: Text(storeName,
             style: Theme.of(context)
                 .textTheme
                 .bodyMedium
                 ?.copyWith(color: ProjectColors.siyah)),
         actions: [
           Text(
-              "Toplam ${Provider.of<CartProvider>(context).totalPriceOfCart().toStringAsFixed(2)}",
+              "Toplam ${Provider.of<CartProvider>(context).totalPriceOfCart().toStringAsFixed(2)} \$",
               style: Theme.of(context).textTheme.bodyMedium)
         ],
       ),
