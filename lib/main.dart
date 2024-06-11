@@ -21,23 +21,33 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(
-          elevatedButtonTheme: ElevatedButtonThemeData(
-              style: ButtonStyle(
-                  backgroundColor:
-                      WidgetStatePropertyAll(Colors.grey.shade200))),
-          appBarTheme: AppBarTheme(
-              centerTitle: true, backgroundColor: ProjectColors.beyaz),
-          scaffoldBackgroundColor: Colors.grey.shade300,
-          cardTheme: const CardTheme(color: Colors.white),
-          floatingActionButtonTheme: FloatingActionButtonThemeData(
-              backgroundColor: ProjectColors.beyaz,
-              foregroundColor: ProjectColors.siyah),
-          textTheme: const TextTheme(
-              bodyMedium:
-                  TextStyle(fontSize: 18, fontWeight: FontWeight.w500))),
+      theme: _themeData(),
       debugShowCheckedModeBanner: false,
       home: const HomeView(),
     );
+  }
+
+  ThemeData _themeData() {
+    return ThemeData(
+        chipTheme: ChipThemeData(
+          backgroundColor: ProjectColors.beyaz,
+          selectedColor: Colors.grey,
+        ),
+        progressIndicatorTheme:
+            ProgressIndicatorThemeData(color: ProjectColors.siyah),
+        elevatedButtonTheme: ElevatedButtonThemeData(
+            style: ButtonStyle(
+                backgroundColor:
+                    WidgetStatePropertyAll(Colors.grey.shade200))),
+        appBarTheme: AppBarTheme(
+            centerTitle: true, backgroundColor: ProjectColors.beyaz),
+        scaffoldBackgroundColor: Colors.grey.shade300,
+        cardTheme: const CardTheme(color: Colors.white),
+        floatingActionButtonTheme: FloatingActionButtonThemeData(
+            backgroundColor: ProjectColors.beyaz,
+            foregroundColor: ProjectColors.siyah),
+        textTheme: const TextTheme(
+            bodyMedium:
+                TextStyle(fontSize: 18, fontWeight: FontWeight.w500)));
   }
 }
