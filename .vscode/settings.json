@@ -6,55 +6,46 @@
       "pubspec.yaml": ".flutter-plugins, .packages, .dart_tool, .flutter-plugins-dependencies, .metadata, .packages, pubspec.lock, build.yaml, analysis_options.yaml, all_lint_rules.yaml",
       ".gitignore": ".gitattributes, .gitmodules, .gitmessage, .mailmap, .git-blame*",
       "readme.*": "authors, backers.md, changelog*, citation*, code_of_conduct.md, codeowners, contributing.md, contributors, copying, credits, governance.md, history.md, license*, maintainers, readme*, security.md, sponsors.md",
-      "*.dart": "$(capture).g.dart, $(capture).freezed.dart",
+      "*.dart": "$(capture).g.dart, $(capture).freezed.dart"
     },
     "yaml.schemas": {
-        "file:///Users/vb10/.vscode/extensions/atlassian.atlascode-3.0.10/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+      "file:///Users/vb10/.vscode/extensions/atlassian.atlascode-3.0.10/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
     },
     "[ruby]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.formatOnSave": true,
-        "editor.formatOnType": true,
-        "editor.tabSize": 2,
-        "editor.insertSpaces": true,
-        "files.trimTrailingWhitespace": true,
-        "files.insertFinalNewline": true,
-        "files.trimFinalNewlines": true,
-        "editor.rulers": [
-            80
-        ],
-        "editor.semanticHighlighting.enabled": true
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+      "editor.formatOnSave": true,
+      "editor.formatOnType": true,
+      "editor.tabSize": 2,
+      "editor.insertSpaces": true,
+      "files.trimTrailingWhitespace": true,
+      "files.insertFinalNewline": true,
+      "files.trimFinalNewlines": true,
+      "editor.rulers": [80],
+      "editor.semanticHighlighting.enabled": true
     },
     "redhat.telemetry.enabled": true,
     "workbench.iconTheme": "material-icon-theme",
     "C_Cpp.default.compilerPath": "/usr/bin/clang",
     "terminal.integrated.env.osx": {
-        "FIG_NEW_SESSION": "1"
+      "FIG_NEW_SESSION": "1"
     },
     "editor.accessibilitySupport": "off",
-    "cSpell.userWords": [
-        "emailofnonmember",
-        "sublist"
-    ],
+    "cSpell.userWords": ["emailofnonmember", "sublist"],
     "github.copilot.enable": {
-        "*": true,
-        "plaintext": false,
-        "markdown": true,
-        "scminput": false
+      "*": true,
+      "plaintext": false,
+      "markdown": true,
+      "scminput": false
     },
     "[dart]": {
-        
-        "editor.formatOnSave": true,
-        "editor.formatOnType": true,
-        "editor.rulers": [
-            80
-        ],
-        "editor.selectionHighlight": true,
-        "editor.suggest.snippetsPreventQuickSuggestions": false,
-        "editor.suggestSelection": "first",
-        "editor.tabCompletion": "onlySnippets",
-        "editor.wordBasedSuggestions": "matchingDocuments",
-     
+      "editor.formatOnSave": true,
+      "editor.formatOnType": true,
+      "editor.rulers": [80],
+      "editor.selectionHighlight": true,
+      "editor.suggest.snippetsPreventQuickSuggestions": false,
+      "editor.suggestSelection": "first",
+      "editor.tabCompletion": "onlySnippets",
+      "editor.wordBasedSuggestions": "matchingDocuments"
     },
     "liveshare.accessibility.accessibilityFeaturesEnabled": "off",
     "codeQL.telemetry.enableTelemetry": false,
@@ -67,84 +58,80 @@
     "dart.debugSdkLibraries": true,
     "atlascode.jira.enabled": true,
     "[javascript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "githubPullRequests.pullBranch": "never",
     "cmake.configureOnOpen": false,
     "cmake.showOptionsMovedNotification": false,
     "accessibility.signals.lineHasError": {
-        "sound": "off"
+      "sound": "off"
     },
     "accessibility.signals.lineHasFoldedArea": {
-        "sound": "off"
+      "sound": "off"
     },
     "accessibility.signals.lineHasBreakpoint": {
-        "sound": "off"
+      "sound": "off"
     },
     "accessibility.signals.lineHasInlineSuggestion": {
-        "sound": "off"
+      "sound": "off"
     },
     "accessibility.signals.terminalQuickFix": {
-        "sound": "off"
+      "sound": "off"
     },
     "accessibility.signals.onDebugBreak": {
-        "sound": "off"
+      "sound": "off"
     },
     "accessibility.signals.noInlayHints": {
-        "sound": "off"
+      "sound": "off"
     },
     "accessibility.signals.taskCompleted": {
-        "sound": "off"
+      "sound": "off"
     },
     "accessibility.signals.taskFailed": {
-        "sound": "off"
+      "sound": "off"
     },
     "accessibility.signals.terminalCommandFailed": {
-        "sound": "off"
+      "sound": "off"
     },
     "accessibility.signals.notebookCellCompleted": {
-        "sound": "off"
+      "sound": "off"
     },
     "accessibility.signals.notebookCellFailed": {
-        "sound": "off"
+      "sound": "off"
     },
     "accessibility.signals.diffLineInserted": {
-        "sound": "off"
+      "sound": "off"
     },
     "accessibility.signals.diffLineDeleted": {
-        "sound": "off"
+      "sound": "off"
     },
     "accessibility.signals.diffLineModified": {
-        "sound": "off"
+      "sound": "off"
     },
     "accessibility.signals.save": {
-        "announcement": "never"
+      "announcement": "never"
     },
     "accessibility.signals.format": {
-        "announcement": "never"
+      "announcement": "never"
     },
     "editor.codeActionsOnSave": {
-        "source.fixAll": "never",
-        "source.organizeImports": "never"
+      "source.fixAll": "never",
+      "source.organizeImports": "never"
     },
     "atlascode.jira.lastCreateSiteAndProject": {
-        "siteId": "",
-        "projectKey": ""
+      "siteId": "",
+      "projectKey": ""
     },
     "explorer.confirmDelete": false,
     "[json]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "dart.warnWhenEditingFilesOutsideWorkspace": false,
     "accessibility.signals.progress": {
-        "sound": "off"
+      "sound": "off"
     },
     "security.promptForLocalFileProtocolHandling": false,
-  "github.copilot.editor.enableAutoCompletions": true,
-  "cSpell.words": [
-      "classlist",
-      "classlisttoken",
-      "vexana"
-  ],
-    
+    "github.copilot.editor.enableAutoCompletions": true,
+    "cSpell.words": ["classlist", "classlisttoken", "kartal", "vexana"]
   }
+  
