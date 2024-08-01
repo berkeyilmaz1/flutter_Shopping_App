@@ -13,18 +13,20 @@ class HomeView extends StatefulWidget {
 }
 
 class _HomeViewState extends HomeviewModel {
+  final String _storeName = "M Y  S T O R E";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: _fabButton(context),
       appBar: AppBar(
         title: _categorySelector(),
-        leading: isLoading
-            ? const Center(child: CircularProgressIndicator())
-            : const SizedBox.shrink(),
+        leading: Center(child: Text(_storeName)),
+        leadingWidth: 200,
         actions: [_searchBar(context)],
       ),
-      body: _bodyProductShower(),
+      body: isLoading
+          ? const Center(child: CircularProgressIndicator())
+          : _bodyProductShower(),
     );
   }
 
